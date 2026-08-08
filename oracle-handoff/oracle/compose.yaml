@@ -1,0 +1,31 @@
+services:
+  oracle:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: oracle-nilit-scada:local
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${ORACLE_BIND_PORT:-8080}:8080"
+    environment:
+      ORACLE_OPERATOR_PASSWORD: "${ORACLE_OPERATOR_PASSWORD:-operator}"
+      ORACLE_SUPERVISOR_PASSWORD: "${ORACLE_SUPERVISOR_PASSWORD:-supervisor}"
+      ORACLE_SESSION_SECRET: "${ORACLE_SESSION_SECRET:-development-only-change-me}"
+      ORACLE_COOKIE_SECURE: "${ORACLE_COOKIE_SECURE:-false}"
+      ORACLE_SCAN_INTERVAL_SECONDS: "${ORACLE_SCAN_INTERVAL_SECONDS:-1.0}"
+      ORACLE_SCREEN_STORE: "${ORACLE_SCREEN_STORE:-/tmp/oracle-screens}"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07101a">
+  <meta name="description" content="Oracle NILIT SCADA operator HMI">
+  <title>Oracle | NILIT SCADA</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <section id="login-screen" class="login-screen" aria-labelledby="login-title">
+    <div class="login-card">
+      <div class="brand brand-login">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><strong>ORACLE</strong><small>NILIT SCADA</small></div>
+      </div>
+      <span class="eyebrow">SECURE HMI SESSION</span>
+      <h1 id="login-title">Sign in to Oracle</h1>
+      <p class="login-copy">Authenticate to monitor and operate the simulated NILIT Line 1 process.</p>
+      <form id="login-form" data-testid="login-form" novalidate>
+        <label for="login-username">Username</label>
+        <select id="login-username" name="username" data-testid="login-username" autocomplete="username">
+          <option value="operator">operator</option>
+          <option value="supervisor">supervisor</option>
+        </select>
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" data-testid="login-password" type="password" autocomplete="current-password" required placeholder="Enter configured password">
+        <button id="login-submit" data-testid="login-submit" class="primary-button login-submit" type="submit">Open HMI session</button>
+        <p id="login-error" data-testid="login-error" class="form-error" role="alert" aria-live="assertive"></p>
+      </form>
+      <div class="login-meta"><span class="simulation-dot"></span><span>Simulation mode · no physical equipment control</span></div>
+    </div>
+  </section>
+
+  <div id="app-shell" class="app-shell is-hidden" aria-hidden="true">
+    <aside id="sidebar" class="sidebar" aria-label="Oracle navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><strong>ORACLE</strong><small>NILIT SCADA</small></div>
+      </div>
+      <div class="site-switcher">
+        <span class="eyebrow">ACTIVE SITE</span>
+        <div class="site-name">NILIT Line 1 <span class="chevron" aria-hidden="true">⌄</span></div>
+        <span class="site-subtitle">Simulated production line</span>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="overview" data-testid="nav-overview" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span>Overview</span></button>
+        <button class="nav-item" data-view="alarms" data-testid="nav-alarms"><span class="nav-icon" aria-hidden="true">⚠</span><span>Alarms</span><span id="alarm-count" class="nav-count">0</span></button>
+        <button class="nav-item" data-view="trends" data-testid="nav-trends"><span class="nav-icon" aria-hidden="true">⌁</span><span>Trends</span></button>
+        <button class="nav-item" data-view="audit" data-testid="nav-audit"><span class="nav-icon" aria-hidden="true">≡</span><span>Audit log</span></button>
+        <button class="nav-item" data-view="screen-editor" data-testid="nav-screen-editor"><span class="nav-icon" aria-hidden="true">□</span><span>Screen Editor</span><span class="nav-badge">UI</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="connection-stack">
+          <div class="connection" data-testid="hmi-connection"><span id="hmi-dot" class="status-dot warning"></span><span><strong>HMI connection</strong><small id="hmi-status" data-testid="hmi-status">Starting…</small></span></div>
+          <div class="connection" data-testid="plc-connection"><span id="plc-dot" class="status-dot"></span><span><strong>PLC / simulator</strong><small id="plc-status" data-testid="plc-status">Waiting for state</small></span></div>
+        </div>
+        <div class="user-card">
+          <div id="user-avatar" class="avatar" aria-hidden="true">OP</div>
+          <span><strong id="user-name">Operator</strong><small id="user-role">operator</small></span>
+          <button id="logout-button" data-testid="logout-button" class="logout-button" type="button" title="Sign out">↪<span class="sr-only">Sign out</span></button>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+      <header class="topbar">
+        <div class="topbar-leading">
+          <button id="mobile-nav-toggle" class="mobile-nav-toggle" data-testid="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+          <div><span class="eyebrow">OPERATIONS / NILIT PRODUCTION</span><h1 id="page-title">NILIT Line 1</h1></div>
+        </div>
+        <div class="top-actions">
+          <span id="last-update" class="last-update">Waiting for state</span>
+          <span id="top-hmi-status" class="top-status warning" data-testid="top-hmi-status">HMI starting</span>
+          <div id="top-avatar" class="avatar top-avatar" aria-hidden="true">OP</div>
+        </div>
+      </header>
+
+      <div class="simulation-banner" role="note" data-testid="simulation-banner"><span class="banner-icon" aria-hidden="true">◉</span><strong>SIMULATION MODE</strong><span>Oracle is connected to a simulated PLC. Commands do not control physical equipment.</span><span id="state-version" class="banner-version">State v—</span></div>
+
+      <section id="overview" class="view active-view" aria-labelledby="overview-title">
+        <div class="status-strip">
+          <div class="process-status"><span id="state-dot" class="state-dot"></span><div><span class="eyebrow">PROCESS STATUS</span><strong id="process-state" data-testid="process-state">WAITING</strong></div></div>
+          <div class="strip-divider"></div>
+          <div class="mode-control"><span class="eyebrow">CONTROL MODE</span><div class="segmented" role="group" aria-label="Control mode"><button data-mode="AUTO" data-testid="mode-auto" class="mode-button selected" type="button">AUTO</button><button data-mode="MANUAL" data-testid="mode-manual" class="mode-button" type="button">MANUAL</button></div><span id="mode-lock" class="lock-note">Supervisor only</span></div>
+          <div class="strip-spacer"></div>
+          <button id="reset-simulator" data-testid="reset-simulator" class="command-button reset supervisor-action" type="button">↺ Reset simulator</button>
+          <button id="stop-button" data-testid="stop-button" class="command-button stop" data-command="stop" type="button"><span aria-hidden="true">■</span> Stop process</button>
+          <button id="start-button" data-testid="start-button" class="command-button start" data-command="start" type="button"><span aria-hidden="true">▶</span> Start process</button>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">TRANSFER FLOW</span><span class="metric-icon blue" aria-hidden="true">↗</span></div><div class="metric-value"><span id="metric-flow" data-testid="metric-flow">—</span><small id="metric-flow-unit">m³/h</small></div><div class="metric-foot"><span id="flow-quality" class="stable">Waiting for data</span><span>live process tag</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">DISCHARGE PRESSURE</span><span class="metric-icon violet" aria-hidden="true">◒</span></div><div class="metric-value"><span id="metric-pressure" data-testid="metric-pressure">—</span><small id="metric-pressure-unit">bar</small></div><div class="metric-foot"><span id="pressure-quality" class="stable">Waiting for data</span><span>operating band</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">PROCESS pH</span><span class="metric-icon amber" aria-hidden="true">pH</span></div><div class="metric-value"><span id="metric-ph" data-testid="metric-ph">—</span><small>pH</small></div><div class="metric-foot"><span id="ph-quality" class="stable">Waiting for data</span><span>6.5 – 8.5 target</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">ACTIVE ALARMS</span><span class="metric-icon red" aria-hidden="true">⚠</span></div><div class="metric-value"><span id="metric-alarms" data-testid="metric-alarms">0</span><small>events</small></div><div class="metric-foot"><span id="alarm-foot" class="stable">All clear</span><span>requires attention</span></div></article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel process-panel" aria-labelledby="mimic-title"><div class="panel-heading"><div><span class="eyebrow">LIVE PROCESS MIMIC</span><h2 id="mimic-title">Transfer train</h2></div><div class="legend" aria-label="Equipment state legend"><span><i class="legend-dot running"></i>Running</span><span><i class="legend-dot stopped"></i>Stopped</span><span><i class="legend-dot fault"></i>Fault</span></div></div>
+            <div class="mimic" aria-label="NILIT Line 1 transfer process diagram" role="img">
+              <div class="tank tank-one" aria-label="TK-101 raw material tank"><div class="equipment-label"><strong>TK-101</strong><span>Raw material</span></div><div class="tank-body"><div id="tank1-fill" class="tank-fill"></div><span id="tank1-level" class="tank-level">—%</span></div><div class="tank-foot">LEVEL <strong id="tank1-foot">—</strong>%</div></div>
+              <div class="pipe pipe-horizontal pipe-inlet"><span class="pipe-arrow" aria-hidden="true">›</span></div>
+              <div class="valve"><div id="valve-glyph" class="valve-glyph open" aria-hidden="true">◇</div><span>XV-101</span><button id="valve-command" data-testid="valve-command" class="micro-button" data-command="close-inlet" type="button">CLOSE</button></div>
+              <div class="pipe pipe-horizontal pipe-to-pump"><span class="pipe-arrow" aria-hidden="true">›</span></div>
+              <div class="pump"><div id="pump-glyph" class="pump-glyph stopped" aria-hidden="true">◉</div><span>P-101</span><small id="pump-status">STOPPED</small></div>
+              <div class="pipe pipe-horizontal pipe-outlet"><span class="pipe-arrow" aria-hidden="true">›</span></div>
+              <div class="tank tank-two" aria-label="TK-102 receiving tank"><div class="equipment-label"><strong>TK-102</strong><span>Product water</span></div><div class="tank-body"><div id="tank2-fill" class="tank-fill"></div><span id="tank2-level" class="tank-level">—%</span></div><div class="tank-foot">LEVEL <strong id="tank2-foot">—</strong>%</div></div>
+              <div class="mimic-reading flow-reading"><span class="reading-line"></span><small>FLOW</small><strong id="mimic-flow">— m³/h</strong></div>
+              <div class="mimic-reading pressure-reading"><small>PRESSURE</small><strong id="mimic-pressure">— bar</strong></div>
+            </div>
+            <div class="mimic-status" id="mimic-status" role="status" aria-live="polite">Waiting for authenticated process state.</div>
+          </section>
+          <section class="panel trend-panel" aria-labelledby="trend-title"><div class="panel-heading"><div><span class="eyebrow">PROCESS TREND</span><h2 id="trend-title">Transfer flow</h2></div><label class="select-label" for="trend-select">Tag<select id="trend-select" data-testid="trend-select"><option value="FT-101.flow">Transfer flow</option><option value="TK-101.level">Tank 101 level</option><option value="TK-102.level">Tank 102 level</option><option value="PT-101.pressure">Discharge pressure</option><option value="AIT-101.ph">Process pH</option><option value="TT-101.temperature">Temperature</option></select></label></div><div class="chart-wrap"><canvas id="trend-chart" width="780" height="280" aria-label="Selected process trend chart"></canvas></div><div class="chart-summary" id="chart-summary" data-testid="chart-summary">No trend data yet.</div><div class="chart-footer"><span><i class="chart-line"></i><span id="chart-unit">m³/h</span></span><span>Last 90 scans</span></div></section>
+        </div>
+
+        <div class="bottom-grid"><section class="panel alarm-preview" aria-labelledby="alarm-preview-title"><div class="panel-heading"><div><span class="eyebrow">ATTENTION QUEUE</span><h2 id="alarm-preview-title">Alarms</h2></div><button class="text-button" data-view="alarms" type="button">View all <span aria-hidden="true">→</span></button></div><div id="alarm-preview-body" class="table-wrap"></div></section><section class="panel event-preview" aria-labelledby="event-preview-title"><div class="panel-heading"><div><span class="eyebrow">OPERATOR ACTIVITY</span><h2 id="event-preview-title">Recent events</h2></div><button class="text-button" data-view="audit" type="button">Audit log <span aria-hidden="true">→</span></button></div><div id="event-preview-body" class="event-list"></div></section></div>
+      </section>
+
+      <section id="alarms" class="view" aria-labelledby="alarms-title"><div class="page-heading"><div><span class="eyebrow">OPERATIONS / ALARMS</span><h2 id="alarms-title">Alarm management</h2><p>Review, acknowledge, and track active process conditions.</p></div><button id="ack-all" data-testid="ack-all" class="command-button ack" type="button">✓ Acknowledge all</button></div><section class="panel full-panel"><div id="alarm-table" class="table-wrap"></div></section></section>
+
+      <section id="trends" class="view" aria-labelledby="trends-title"><div class="page-heading"><div><span class="eyebrow">OPERATIONS / TRENDS</span><h2 id="trends-title">Historian trends</h2><p>Short-term values buffered in the HMI session.</p></div><label class="select-label trend-page-select" for="trend-select-large">Tag<select id="trend-select-large" data-testid="trend-select-large"><option value="FT-101.flow">Transfer flow</option><option value="TK-101.level">Tank 101 level</option><option value="TK-102.level">Tank 102 level</option><option value="PT-101.pressure">Discharge pressure</option><option value="AIT-101.ph">Process pH</option><option value="TT-101.temperature">Temperature</option></select></label></div><section class="panel full-panel"><div class="large-chart-wrap"><canvas id="large-trend-chart" width="1200" height="480" aria-label="Large selected process trend chart"></canvas></div><div class="chart-summary large-summary" id="large-chart-summary">No trend data yet.</div></section></section>
+
+      <section id="audit" class="view" aria-labelledby="audit-title"><div class="page-heading"><div><span class="eyebrow">OPERATIONS / AUDIT</span><h2 id="audit-title">Audit log</h2><p>Operator and system events from the authenticated Oracle session.</p></div><button id="download-audit" data-testid="download-audit" class="command-button ack" type="button">↓ Export JSON</button></div><section class="panel full-panel"><div id="audit-table" class="table-wrap"></div></section></section>
+
+      <section id="screen-editor" class="view" aria-labelledby="screen-editor-title"><div class="page-heading"><div><span class="eyebrow">ENGINEERING / SCREEN DESIGN</span><h2 id="screen-editor-title">Screen Editor</h2><p>Author reusable process screens and bind them to Oracle runtime tags.</p></div><span id="editor-permission" class="permission-pill">Supervisor authoring</span></div><section id="screen-editor-root" data-testid="screen-editor-root" class="screen-editor-root" aria-label="Oracle screen editor entry point"><div class="editor-entry"><div class="editor-entry-icon" aria-hidden="true">□</div><div><h3>Oracle Screen Editor</h3><p id="editor-entry-copy">Loading the editor workspace…</p><button id="editor-retry" class="command-button ack" type="button" hidden>Retry editor load</button></div></div></section></section>
+
+      <footer class="footer-note"><span>SIMULATION MODE</span><span aria-hidden="true">•</span><span>All commands are local to this demo server and do not control physical equipment.</span><span class="footer-right">ORACLE HMI v1.0 · NILIT SCADA</span></footer>
+    </main>
+  </div>
+
+  <div id="session-expired" class="modal-backdrop is-hidden" role="dialog" aria-modal="true" aria-labelledby="session-expired-title"><div class="modal-card"><span class="eyebrow">SESSION STATUS</span><h2 id="session-expired-title">Session expired</h2><p>Your Oracle session is no longer valid. The last process snapshot is frozen read-only until you sign in again.</p><button id="session-login" class="primary-button" type="button">Return to sign in</button></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="aria-announcer" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111c">
+  <title>AquaPure | SCADA HMI</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>AQUAPURE</strong><small>CONTROL SYSTEMS</small></div>
+      </div>
+      <div class="site-switcher">
+        <span class="eyebrow">ACTIVE SITE</span>
+        <div class="site-name">North Utility Plant <span class="chevron">⌄</span></div>
+      </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◈</span>Overview</button>
+        <button class="nav-item" data-view="alarms"><span class="nav-icon">△</span>Alarms <span id="alarm-count" class="nav-count">0</span></button>
+        <button class="nav-item" data-view="trends"><span class="nav-icon">⌁</span>Trends</button>
+        <button class="nav-item" data-view="audit"><span class="nav-icon">≡</span>Audit log</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="connection"><span class="status-dot"></span><span><strong>PLC connection</strong><small id="plc-status">Healthy · 1 s scan</small></span></div>
+        <div class="user-card"><div class="avatar">OP</div><span><strong>Operator 01</strong><small>Control room</small></span><span class="more">···</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><span class="eyebrow">OPERATIONS / WATER TREATMENT</span><h1>AquaPure Treatment Skid</h1></div>
+        <div class="top-actions"><span id="last-update" class="last-update">Last update —</span><button class="icon-button" title="Notifications">♧</button><button class="avatar top-avatar">OP</button></div>
+      </header>
+
+      <section id="overview" class="view active-view">
+        <div class="status-strip">
+          <div class="process-status"><span id="state-dot" class="state-dot"></span><div><span class="eyebrow">PROCESS STATUS</span><strong id="process-state">RUNNING</strong></div></div>
+          <div class="strip-divider"></div>
+          <div class="mode-control"><span class="eyebrow">CONTROL MODE</span><div class="segmented"><button data-mode="AUTO" class="mode-button selected">AUTO</button><button data-mode="MANUAL" class="mode-button">MANUAL</button></div></div>
+          <div class="strip-spacer"></div>
+          <button class="command-button stop" data-command="stop"><span>■</span> Stop process</button>
+          <button class="command-button start" data-command="start"><span>▶</span> Start process</button>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">TRANSFER FLOW</span><span class="metric-icon blue">↗</span></div><div class="metric-value"><span id="metric-flow">—</span><small>m³/h</small></div><div class="metric-foot"><span class="trend up">↗ 4.8%</span><span>vs. last hour</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">AVERAGE PRESSURE</span><span class="metric-icon violet">◉</span></div><div class="metric-value"><span id="metric-pressure">—</span><small>bar</small></div><div class="metric-foot"><span class="stable">● Stable</span><span>operating band</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">PROCESS pH</span><span class="metric-icon amber">⌁</span></div><div class="metric-value"><span id="metric-ph">—</span><small>pH</small></div><div class="metric-foot"><span class="stable">● In range</span><span>6.5 — 8.5 target</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span class="metric-label">ACTIVE ALARMS</span><span class="metric-icon red">△</span></div><div class="metric-value"><span id="metric-alarms">0</span><small>events</small></div><div class="metric-foot"><span id="alarm-foot" class="stable">● All clear</span><span>requires attention</span></div></article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel process-panel"><div class="panel-heading"><div><span class="eyebrow">LIVE PROCESS MIMIC</span><h2>Transfer train</h2></div><div class="legend"><span><i class="legend-dot running"></i>Running</span><span><i class="legend-dot stopped"></i>Stopped</span></div></div>
+            <div class="mimic" aria-label="Process mimic diagram">
+              <div class="tank tank-one"><div class="equipment-label"><strong>TK-101</strong><span>Raw water</span></div><div class="tank-body"><div id="tank1-fill" class="tank-fill"></div><span id="tank1-level" class="tank-level">—%</span></div><div class="tank-foot">LEVEL <strong id="tank1-foot">—</strong>%</div></div>
+              <div class="pipe pipe-horizontal pipe-inlet"><span class="pipe-arrow">›</span></div><div class="valve"><div id="valve-glyph" class="valve-glyph open">◇</div><span>XV-101</span><button id="valve-command" class="micro-button">OPEN</button></div>
+              <div class="pipe pipe-horizontal pipe-to-pump"><span class="pipe-arrow">›</span></div><div class="pump"><div id="pump-glyph" class="pump-glyph running">◉</div><span>P-101</span><small id="pump-status">RUNNING</small></div>
+              <div class="pipe pipe-horizontal pipe-outlet"><span class="pipe-arrow">›</span></div><div class="tank tank-two"><div class="equipment-label"><strong>TK-102</strong><span>Product water</span></div><div class="tank-body"><div id="tank2-fill" class="tank-fill"></div><span id="tank2-level" class="tank-level">—%</span></div><div class="tank-foot">LEVEL <strong id="tank2-foot">—</strong>%</div></div>
+              <div class="mimic-reading flow-reading"><span class="reading-line"></span><small>FLOW</small><strong id="mimic-flow">— m³/h</strong></div>
+              <div class="mimic-reading pressure-reading"><small>PRESSURE</small><strong id="mimic-pressure">— bar</strong></div>
+            </div>
+          </section>
+          <section class="panel trend-panel"><div class="panel-heading"><div><span class="eyebrow">PROCESS TREND</span><h2 id="trend-title">Transfer flow</h2></div><select id="trend-select"><option value="FT-101.flow">Transfer flow</option><option value="TK-101.level">Tank 101 level</option><option value="PT-101.pressure">Discharge pressure</option><option value="AIT-101.ph">Process pH</option></select></div><div class="chart-wrap"><canvas id="trend-chart" width="780" height="280"></canvas></div><div class="chart-footer"><span><i class="chart-line"></i><span id="chart-unit">m³/h</span></span><span>Last 90 scans</span></div></section>
+        </div>
+
+        <div class="bottom-grid"><section class="panel alarm-preview"><div class="panel-heading"><div><span class="eyebrow">ATTENTION QUEUE</span><h2>Alarms</h2></div><button class="text-button" data-view="alarms">View all <span>→</span></button></div><div id="alarm-preview-body" class="table-wrap"></div></section><section class="panel event-preview"><div class="panel-heading"><div><span class="eyebrow">OPERATOR ACTIVITY</span><h2>Recent events</h2></div><button class="text-button" data-view="audit">Audit log <span>→</span></button></div><div id="event-preview-body" class="event-list"></div></section></div>
+      </section>
+
+      <section id="alarms" class="view"><div class="page-heading"><div><span class="eyebrow">OPERATIONS / ALARMS</span><h2>Alarm management</h2><p>Review, acknowledge, and track active process conditions.</p></div><button id="ack-all" class="command-button ack">✓ Acknowledge all</button></div><section class="panel full-panel"><div id="alarm-table" class="table-wrap"></div></section></section>
+      <section id="trends" class="view"><div class="page-heading"><div><span class="eyebrow">OPERATIONS / TRENDS</span><h2>Historian trends</h2><p>Short-term values buffered in the HMI session.</p></div></div><section class="panel full-panel"><div class="large-chart-wrap"><canvas id="large-trend-chart" width="1200" height="480"></canvas></div></section></section>
+      <section id="audit" class="view"><div class="page-heading"><div><span class="eyebrow">OPERATIONS / AUDIT</span><h2>Audit log</h2><p>Operator and system events from this HMI session.</p></div><button id="download-audit" class="command-button ack">↓ Export JSON</button></div><section class="panel full-panel"><div id="audit-table" class="table-wrap"></div></section></section>
+      <footer class="footer-note"><span>SIMULATION MODE</span><span>•</span><span>All commands are local to this demo server and do not control physical equipment.</span><span class="footer-right">AQUAPURE HMI v1.0</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

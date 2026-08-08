@@ -1,0 +1,314 @@
+:root {
+  --oracle-editor-bg: #06111b;
+  --oracle-editor-panel: #0a1925;
+  --oracle-editor-panel-2: #0d2230;
+  --oracle-editor-border: #1a3a4b;
+  --oracle-editor-border-strong: #2b6278;
+  --oracle-editor-text: #d8eaf0;
+  --oracle-editor-muted: #7fa2af;
+  --oracle-editor-accent: #42d6df;
+  --oracle-editor-accent-2: #89eff1;
+  --oracle-editor-warning: #ffbf69;
+  --oracle-editor-danger: #ff7585;
+  --oracle-editor-good: #5be39b;
+  --oracle-editor-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --oracle-editor-radius: 8px;
+  color-scheme: dark;
+}
+
+.oracle-editor-root {
+  min-height: 680px;
+  width: 100%;
+  background: var(--oracle-editor-bg);
+  color: var(--oracle-editor-text);
+  font: 13px/1.4 Inter, "Segoe UI", Arial, sans-serif;
+  overflow: hidden;
+  outline: none;
+}
+
+.oracle-editor-root * { box-sizing: border-box; }
+.oracle-editor-root button,
+.oracle-editor-root input,
+.oracle-editor-root select { font: inherit; }
+.oracle-editor-root button { color: inherit; }
+.oracle-editor-root button:focus-visible,
+.oracle-editor-root input:focus-visible,
+.oracle-editor-root select:focus-visible,
+.oracle-editor-root [tabindex]:focus-visible {
+  outline: 2px solid var(--oracle-editor-accent);
+  outline-offset: 2px;
+}
+
+.oracle-editor-shell {
+  min-height: 680px;
+  height: min(900px, 92vh);
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% -10%, rgba(39, 101, 122, 0.16), transparent 44%), var(--oracle-editor-bg);
+}
+
+.oracle-editor-toolbar {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--oracle-editor-border);
+  background: rgba(8, 24, 35, 0.96);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  z-index: 5;
+}
+
+.oracle-editor-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 164px;
+  margin-right: 5px;
+}
+
+.oracle-editor-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--oracle-editor-accent);
+  border-radius: 50%;
+  color: var(--oracle-editor-accent-2);
+  font-weight: 800;
+  box-shadow: 0 0 18px rgba(66, 214, 223, 0.22);
+}
+
+.oracle-editor-brand-text { display: grid; line-height: 1.05; }
+.oracle-editor-brand-text strong { letter-spacing: 0.16em; font-size: 12px; }
+.oracle-editor-brand-text small { color: var(--oracle-editor-muted); letter-spacing: 0.07em; font-size: 8px; margin-top: 4px; }
+
+.oracle-editor-mode-switch,
+.oracle-editor-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--oracle-editor-border);
+  border-radius: 7px;
+  background: rgba(4, 15, 23, 0.48);
+}
+
+.oracle-editor-toolbar-group-right { margin-left: auto; }
+
+.oracle-editor-button {
+  min-height: 30px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--oracle-editor-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.oracle-editor-button:hover { border-color: var(--oracle-editor-border-strong); background: #102c3b; color: var(--oracle-editor-text); }
+.oracle-editor-button.is-active { border-color: rgba(66, 214, 223, 0.55); background: rgba(31, 105, 121, 0.33); color: var(--oracle-editor-accent-2); }
+.oracle-editor-button.primary { background: #1e8896; color: #f2ffff; border-color: #45ced6; }
+.oracle-editor-button.primary:hover { background: #2ca7b2; }
+.oracle-editor-button.danger { color: #ff9ca7; }
+.oracle-editor-button.icon { min-width: 28px; padding-inline: 5px; }
+.oracle-editor-button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.oracle-editor-body {
+  min-height: 0;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 225px minmax(440px, 1fr) 285px;
+}
+
+.oracle-editor-library,
+.oracle-editor-inspector {
+  min-height: 0;
+  overflow: auto;
+  background: rgba(8, 24, 35, 0.92);
+}
+
+.oracle-editor-library { border-right: 1px solid var(--oracle-editor-border); padding: 14px 11px; }
+.oracle-editor-inspector { border-left: 1px solid var(--oracle-editor-border); padding: 14px 12px; }
+
+.oracle-editor-panel-heading {
+  margin: 0 0 10px;
+  color: #effeff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.oracle-editor-subheading {
+  margin: 15px 0 7px;
+  color: var(--oracle-editor-accent-2);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.oracle-editor-input {
+  width: 100%;
+  min-height: 30px;
+  padding: 5px 8px;
+  border: 1px solid var(--oracle-editor-border);
+  border-radius: 5px;
+  background: #06131d;
+  color: var(--oracle-editor-text);
+}
+.oracle-editor-input:hover { border-color: #2c5c6e; }
+.oracle-editor-input[type="color"] { padding: 3px; min-height: 30px; }
+.oracle-editor-input[type="number"] { min-width: 0; }
+.oracle-editor-library-search { margin-bottom: 10px; }
+
+.oracle-editor-library-list { display: grid; gap: 5px; }
+.oracle-editor-library-category { margin-top: 11px; color: var(--oracle-editor-muted); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.oracle-editor-library-category:first-child { margin-top: 0; }
+
+.oracle-editor-part-card,
+.oracle-editor-template-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 8px 7px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.oracle-editor-part-card:hover,
+.oracle-editor-template-card:hover { border-color: var(--oracle-editor-border-strong); background: #0d2938; }
+.oracle-editor-part-card:active { cursor: grabbing; }
+.oracle-editor-part-icon {
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #32647a;
+  border-radius: 6px;
+  background: #0b2635;
+  color: var(--oracle-editor-accent-2);
+  font-size: 20px;
+}
+.oracle-editor-part-icon-tank { color: #58d2dc; }
+.oracle-editor-part-icon-pump { color: #9cecf0; }
+.oracle-editor-part-icon-valve { color: #f3c274; }
+.oracle-editor-part-icon-instrument { color: #d3aaff; }
+.oracle-editor-part-icon-pipe { color: #7ac7dd; }
+.oracle-editor-part-icon-text { color: #f2f5fb; font-weight: 800; }
+.oracle-editor-part-card-text { display: grid; min-width: 0; }
+.oracle-editor-part-card-text strong { font-size: 12px; }
+.oracle-editor-part-card-text small { overflow: hidden; color: var(--oracle-editor-muted); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+
+.oracle-editor-template-list { display: grid; gap: 5px; }
+.oracle-editor-template-card { padding-block: 6px; color: var(--oracle-editor-muted); }
+.oracle-editor-template-preview { display: grid; place-items: center; width: 30px; height: 24px; border: 1px solid #285267; border-radius: 4px; color: var(--oracle-editor-accent); font-size: 17px; }
+
+.oracle-editor-workspace { min-width: 0; min-height: 0; display: flex; flex-direction: column; background: #050e15; }
+.oracle-editor-canvas-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 38px; padding: 7px 12px; border-bottom: 1px solid #122b38; background: #071923; }
+.oracle-editor-screen-name { overflow: hidden; color: #ddfaff; font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.oracle-editor-canvas-help { overflow: hidden; color: var(--oracle-editor-muted); font-size: 10px; text-align: right; text-overflow: ellipsis; white-space: nowrap; }
+.oracle-editor-stage { min-height: 0; flex: 1; position: relative; overflow: hidden; background: #030a10; }
+.oracle-editor-canvas { display: block; width: 100%; height: 100%; min-height: 480px; cursor: default; user-select: none; }
+.oracle-editor-canvas.is-pan-tool { cursor: grab; }
+.oracle-editor-canvas.is-pan-tool:active { cursor: grabbing; }
+.oracle-editor-canvas.is-connector-tool { cursor: crosshair; }
+
+.oracle-editor-element { cursor: grab; outline: none; }
+.oracle-editor-element:active { cursor: grabbing; }
+.oracle-editor-element.is-locked { cursor: not-allowed; opacity: 0.72; }
+.oracle-editor-element.is-selected > :first-child { filter: url(#oracle-editor-glow); }
+.oracle-editor-element.is-selected { filter: drop-shadow(0 0 5px rgba(66, 214, 223, 0.24)); }
+.oracle-editor-label { fill: #c9e3ea; font-size: 15px; font-weight: 700; pointer-events: none; }
+.oracle-editor-value-label { fill: #a3edf0; font-size: 13px; font-weight: 700; pointer-events: none; }
+.oracle-editor-instrument-value { fill: #e5fcff; font-size: 18px; font-weight: 800; pointer-events: none; }
+.oracle-editor-unit-label { fill: #81aab6; font-size: 11px; pointer-events: none; }
+.oracle-editor-status-good { fill: var(--oracle-editor-good); stroke: #b9ffd6; stroke-width: 2; }
+.oracle-editor-status-off { fill: #6d8390; stroke: #a3b4bb; stroke-width: 1; }
+.oracle-editor-runtime-overlay { fill: none; stroke: rgba(137, 239, 241, 0.22); stroke-width: 3; pointer-events: none; }
+.oracle-editor-connector { opacity: 0.9; }
+.oracle-editor-connector.is-selected { stroke: var(--oracle-editor-accent-2); filter: drop-shadow(0 0 5px rgba(66, 214, 223, 0.5)); }
+.oracle-editor-connector-hit { stroke: transparent; stroke-width: 18; cursor: pointer; pointer-events: stroke; }
+.oracle-editor-port { fill: #092431; stroke: var(--oracle-editor-accent-2); stroke-width: 2; cursor: crosshair; }
+.oracle-editor-port:hover { fill: var(--oracle-editor-accent); }
+.oracle-editor-selection-box { fill: rgba(66, 214, 223, 0.08); stroke: var(--oracle-editor-accent); stroke-width: 2; stroke-dasharray: 8 5; pointer-events: none; }
+.oracle-editor-resize-handle { fill: #e9ffff; stroke: #13798a; stroke-width: 2; cursor: nwse-resize; }
+.oracle-editor-guide { stroke: #f2bb68; stroke-width: 1.5; stroke-dasharray: 8 5; pointer-events: none; }
+.oracle-editor-marquee { fill: rgba(66, 214, 223, 0.1); stroke: var(--oracle-editor-accent); stroke-width: 1.5; stroke-dasharray: 5 4; pointer-events: none; }
+
+.oracle-editor-statusbar { min-height: 28px; display: flex; align-items: center; gap: 16px; padding: 5px 10px; border-top: 1px solid #122b38; background: #071923; color: var(--oracle-editor-muted); font-size: 10px; }
+.oracle-editor-statusbar > span:first-child { color: #a9d7de; }
+.oracle-editor-status-validation { margin-left: auto; }
+
+.oracle-editor-inspector-title { display: flex; align-items: baseline; justify-content: space-between; gap: 7px; margin-bottom: 3px; }
+.oracle-editor-inspector-type { color: var(--oracle-editor-accent-2); font-size: 13px; font-weight: 800; }
+.oracle-editor-inspector-title code { overflow: hidden; color: var(--oracle-editor-muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.oracle-editor-inspector-section { padding: 8px 0 10px; border-bottom: 1px solid rgba(26, 58, 75, 0.75); }
+.oracle-editor-inspector-section .oracle-editor-subheading { margin-top: 0; }
+.oracle-editor-field { display: grid; gap: 4px; min-width: 0; margin-bottom: 7px; }
+.oracle-editor-field-label { color: var(--oracle-editor-muted); font-size: 10px; }
+.oracle-editor-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.oracle-editor-field-row .oracle-editor-field { min-width: 0; }
+.oracle-editor-binding { margin-bottom: 9px; padding: 7px; border: 1px solid var(--oracle-editor-border); border-radius: 6px; background: rgba(5, 16, 24, 0.5); }
+.oracle-editor-binding-label { display: block; margin-bottom: 6px; color: #d7f6f8; font-size: 11px; font-weight: 700; }
+.oracle-editor-check-row { display: flex; align-items: center; gap: 7px; margin: 8px 0; color: var(--oracle-editor-text); cursor: pointer; }
+.oracle-editor-check-row input { accent-color: var(--oracle-editor-accent); }
+.oracle-editor-inspector-note { display: grid; gap: 5px; margin-top: 11px; padding: 8px; border-left: 2px solid #2f7282; background: rgba(14, 51, 65, 0.35); color: var(--oracle-editor-muted); font-size: 10px; }
+.oracle-editor-inspector-note strong { color: var(--oracle-editor-accent-2); font-size: 10px; text-transform: uppercase; }
+
+.oracle-editor-layer-row { display: grid; grid-template-columns: minmax(0, 1fr) 29px 29px; gap: 3px; align-items: center; margin: 4px 0; }
+.oracle-editor-layer-row.is-active > button:first-child { border-color: #2e8191; background: #103342; color: var(--oracle-editor-accent-2); }
+.oracle-editor-layer-row > button:first-child { overflow: hidden; text-align: left; text-overflow: ellipsis; white-space: nowrap; }
+.oracle-editor-layers-section { border-bottom: 0; }
+
+.oracle-editor-validation-box { margin-top: 12px; padding: 9px; border: 1px solid rgba(91, 227, 155, 0.5); border-radius: 6px; background: rgba(24, 91, 68, 0.18); color: #baf7d1; font-size: 10px; }
+.oracle-editor-validation-box.has-errors { border-color: rgba(255, 117, 133, 0.7); background: rgba(110, 31, 46, 0.2); color: #ffc0c8; }
+.oracle-editor-validation-list { margin: 6px 0 0; padding-left: 17px; color: #ffd0a0; }
+.oracle-editor-validation-list.warnings { color: var(--oracle-editor-warning); }
+.oracle-editor-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 1180px) {
+  .oracle-editor-body { grid-template-columns: 190px minmax(380px, 1fr) 250px; }
+  .oracle-editor-brand { min-width: 138px; }
+  .oracle-editor-toolbar-group-right .oracle-editor-button { padding-inline: 6px; }
+  .oracle-editor-canvas-help { display: none; }
+}
+
+@media (max-width: 900px) {
+  .oracle-editor-root, .oracle-editor-shell { min-height: 760px; height: auto; }
+  .oracle-editor-toolbar { flex-wrap: wrap; }
+  .oracle-editor-toolbar-group-right { margin-left: 0; }
+  .oracle-editor-body { grid-template-columns: 175px minmax(0, 1fr); grid-template-rows: minmax(560px, 1fr) auto; }
+  .oracle-editor-inspector { grid-column: 1 / -1; max-height: 390px; border-top: 1px solid var(--oracle-editor-border); border-left: 0; display: grid; grid-template-columns: repeat(2, minmax(180px, 1fr)); gap: 0 18px; }
+  .oracle-editor-inspector > .oracle-editor-panel-heading { grid-column: 1 / -1; }
+  .oracle-editor-inspector > .oracle-editor-layers-section,
+  .oracle-editor-inspector > .oracle-editor-validation-box { grid-column: 1 / -1; }
+}
+
+@media (max-width: 640px) {
+  .oracle-editor-toolbar { gap: 4px; padding: 7px; }
+  .oracle-editor-brand { width: 100%; min-width: 0; }
+  .oracle-editor-toolbar-group { flex-wrap: wrap; }
+  .oracle-editor-toolbar-group-right { width: 100%; }
+  .oracle-editor-toolbar-group-right .oracle-editor-button { flex: 1; }
+  .oracle-editor-body { display: flex; flex-direction: column; }
+  .oracle-editor-library { max-height: 230px; border-right: 0; border-bottom: 1px solid var(--oracle-editor-border); }
+  .oracle-editor-library-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .oracle-editor-library-category { grid-column: 1 / -1; }
+  .oracle-editor-workspace { min-height: 560px; }
+  .oracle-editor-inspector { display: block; max-height: none; border-top: 1px solid var(--oracle-editor-border); }
+  .oracle-editor-canvas { min-height: 390px; }
+  .oracle-editor-statusbar { gap: 8px; flex-wrap: wrap; }
+  .oracle-editor-status-validation { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oracle-editor-root * { transition: none !important; animation: none !important; }
+}
