@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Watchdog>
+  <TargetPath>C:\Vuniq50\VB E_L\nilit.exe</TargetPath>
+  <VuniqPath>C:\Vuniq50\bin\Vuniq.exe</VuniqPath>
+  <Arguments></Arguments>
+  <WorkingDirectory>C:\Vuniq50\VB E_L</WorkingDirectory>
+  <CheckSeconds>5</CheckSeconds>
+  <RecoveryDelaySeconds>20</RecoveryDelaySeconds>
+  <TargetGraceSeconds>60</TargetGraceSeconds>
+  <HangSeconds>60</HangSeconds>
+  <MaxStartsPerWindow>0</MaxStartsPerWindow>
+  <RestartWindowMinutes>15</RestartWindowMinutes>
+  <RestartHung>true</RestartHung>
+</Watchdog>

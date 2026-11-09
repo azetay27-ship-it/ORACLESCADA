@@ -1,0 +1,678 @@
+{
+  "Line GH": {
+    "links.sxml": {
+      "bytes": 31,
+      "sha256": "5162fc47b87524c985e77718c679e475058a57081833326a59f28622df62e52d"
+    },
+    "styles.sxml": {
+      "bytes": 24,
+      "sha256": "db13d3d496bfb42f3e46890809b5f211958e1f6dd310ae78a3efa0823dd72523"
+    },
+    "symbols.sxml": {
+      "bytes": 1151363,
+      "sha256": "9236b5696a6d1df534381ca69da91c0057350c86f3963aa0ea16bf2b2cd091e5"
+    },
+    "vuniq.pdf": {
+      "bytes": 1521682,
+      "sha256": "87d8acdb99df5904687d53864a578f25972ce4550e47c28fd389a3cbd38e4c6c"
+    },
+    "barmag/barmag.ini": {
+      "bytes": 104,
+      "sha256": "81cde83b56e50e719d0ad5f200e9796b0ee7fe73348eb34ab325c6d5823da09a"
+    },
+    "barmag/defs.db": {
+      "bytes": 27648,
+      "sha256": "782da93ddff9b20392a6438bcfae7affe58dd89ee348aee68f13d47011eebeb8"
+    },
+    "barmag/RTVar.sxml": {
+      "bytes": 42842,
+      "sha256": "2bb4176107347708c32255b91eb8cae26681d5c7ca80be77f51251f255e28884"
+    },
+    "barmag/settings.sxml": {
+      "bytes": 15052,
+      "sha256": "018a7c66c6a4a01904faccf6d6f3c77b782566bc78a9a10ded22c66092db5127"
+    },
+    "barmag/vuapp.ini": {
+      "bytes": 8092,
+      "sha256": "90417527999559765628ac285bf7d115dafb9b4782079f9e35cdab80e56e2aed"
+    },
+    "bin/DRVbarmag.dll": {
+      "bytes": 387584,
+      "sha256": "21729da20e3b4f6d67a9925b6edfb249f6c05b5a98949b88b364bc98e7a7a8ac"
+    },
+    "bin/DrvDT.dll": {
+      "bytes": 382976,
+      "sha256": "933855286d9b617373eb34b9f15099fed672dbd9bc62c70064286fe99808bf3f"
+    },
+    "bin/DrvgwWS.dll": {
+      "bytes": 420864,
+      "sha256": "fea7caf7fd70d81b6efb55a097244315a138ad118404ce9cb7b9e917fd51923d"
+    },
+    "bin/gdiplus.dll": {
+      "bytes": 1712128,
+      "sha256": "ddbcc667f1adeeaa2c3f3f9e9a0c163d624cf8168462710f939854ec13901ce4"
+    },
+    "bin/HEI32_3.DLL": {
+      "bytes": 77824,
+      "sha256": "854186a189c859dec8eb8acedb92986857cfdb9a8342f4c14d20e4b09ed8c637"
+    },
+    "bin/license.exe": {
+      "bytes": 412672,
+      "sha256": "c2b8047b27703d9b88e0702be59bf362b4861e36970c1c3154ddeb6bcb671e3d"
+    },
+    "bin/sqlite3.dll": {
+      "bytes": 246784,
+      "sha256": "05dbbb66df11db7e2dda6bcf2b16159b220bb58ff370c985f05f26d7049d2d5d"
+    },
+    "bin/Vuniq.exe": {
+      "bytes": 3971072,
+      "sha256": "5d685bf145baa1cefd7ec6f7a62c45ffb819df364c0fe7072986d5ed2595eafa"
+    },
+    "VB E_L-5/General.bas": {
+      "bytes": 13593,
+      "sha256": "dc162ef53e75d0778fa4e4227bdf96ec564a205ae5e95a36b7c36e9629a3c400"
+    },
+    "VB E_L-5/Main.frm": {
+      "bytes": 1238,
+      "sha256": "637429a41446fab03318d8b9508f8db8ecec66757df25479e8b68e3eb6cea281"
+    },
+    "VB E_L-5/nilit.exe": {
+      "bytes": 36864,
+      "sha256": "e0c155fbaa5f23c2806b4608eb09193063dab613b712a6c5132fd517592efc09"
+    },
+    "VB E_L-5/Nilit.vbp": {
+      "bytes": 703,
+      "sha256": "72f5ca7acbb89517d1c3cb8688c7e9a1bd1fbf15fbf6c34c43af2bd88df4e97a"
+    },
+    "VB E_L-5/nilit.vbw": {
+      "bytes": 79,
+      "sha256": "6c28443b8df63bcbfedcfdf7c9a6e62fde163511fcd861ede75a677e081b7a42"
+    },
+    "VB_EtoL-5_old/General.bas": {
+      "bytes": 13539,
+      "sha256": "3283ff7f244851b5c8d72e40c9df57c53a0a179afe1466ae459805ff96b34e87"
+    },
+    "VB_EtoL-5_old/Main.frm": {
+      "bytes": 1145,
+      "sha256": "b31e0d9060868581e89be04bc396bea7f18823b20e426333c66071f438f19b14"
+    },
+    "VB_EtoL-5_old/MSSCCPRJ.SCC": {
+      "bytes": 334,
+      "sha256": "6af03d44c9a4646f95db8faf7ae3d6ad957f3efb390ed3dc28590fb07c468b6d"
+    },
+    "VB_EtoL-5_old/nilit.exe": {
+      "bytes": 36864,
+      "sha256": "25a2193dff09f5f028e37c353dd3e90b955b665a5a57b479c93c75ebb6564251"
+    },
+    "VB_EtoL-5_old/Nilit.vbp": {
+      "bytes": 694,
+      "sha256": "0a809270637a8dbf969f2ad7f3ec58577a4361d440f31e691ff493f37f27fe5a"
+    },
+    "VB_EtoL-5_old/nilit.vbw": {
+      "bytes": 79,
+      "sha256": "6c28443b8df63bcbfedcfdf7c9a6e62fde163511fcd861ede75a677e081b7a42"
+    },
+    "VB_EtoL-5_old/.svn/empty-file": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/entries": {
+      "bytes": 2011,
+      "sha256": "847b9c7ae0502cd889010e4a5d1da6578724d60aea25ea900e1c4a9c3b779c05"
+    },
+    "VB_EtoL-5_old/.svn/format": {
+      "bytes": 2,
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+    },
+    "VB_EtoL-5_old/.svn/README.txt": {
+      "bytes": 120,
+      "sha256": "6202d662cd37a12d59642bfb836588ec324f790893653213e958a6f11ee687e5"
+    },
+    "VB_EtoL-5_old/.svn/prop-base/General.bas.svn-base": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/prop-base/Main.frm.svn-base": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/prop-base/MSSCCPRJ.SCC.svn-base": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/prop-base/VBDemo.exe.svn-base": {
+      "bytes": 53,
+      "sha256": "ebbf7e8800c3446bc3a195fa53573bde1073b0bf7581a614372f1391a9286d02"
+    },
+    "VB_EtoL-5_old/.svn/prop-base/VBDemo.vbp.svn-base": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/prop-base/VBDemo.vbw.svn-base": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/props/General.bas.svn-work": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/props/Main.frm.svn-work": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/props/MSSCCPRJ.SCC.svn-work": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/props/VBDemo.exe.svn-work": {
+      "bytes": 53,
+      "sha256": "ebbf7e8800c3446bc3a195fa53573bde1073b0bf7581a614372f1391a9286d02"
+    },
+    "VB_EtoL-5_old/.svn/props/VBDemo.vbp.svn-work": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/props/VBDemo.vbw.svn-work": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "VB_EtoL-5_old/.svn/text-base/General.bas.svn-base": {
+      "bytes": 31,
+      "sha256": "23ebcb7007acfc078dddec7d1f9b0c2abde4de126252b5051f554dc9b3fc6256"
+    },
+    "VB_EtoL-5_old/.svn/text-base/Main.frm.svn-base": {
+      "bytes": 4514,
+      "sha256": "5f914f4d65256624cb356bd88ff1a7c5f80bbd08e66c5cdf6ffdc8568f045109"
+    },
+    "VB_EtoL-5_old/.svn/text-base/MSSCCPRJ.SCC.svn-base": {
+      "bytes": 191,
+      "sha256": "3f7f4eb75231f4e85b75e1ab4a9d2114279f0e4d997fc44aba310e9ccdfc0666"
+    },
+    "VB_EtoL-5_old/.svn/text-base/VBDemo.exe.svn-base": {
+      "bytes": 24576,
+      "sha256": "f4da72034747f12548e125c1caf1f16b8fcb5e70c20562a03ac487435322b08a"
+    },
+    "VB_EtoL-5_old/.svn/text-base/VBDemo.vbp.svn-base": {
+      "bytes": 675,
+      "sha256": "f5cfff928f270c08840d8e43c897990f8b203d1330731d59e548bfa5696d6902"
+    },
+    "VB_EtoL-5_old/.svn/text-base/VBDemo.vbw.svn-base": {
+      "bytes": 49,
+      "sha256": "5047bdd88819f77a51c25cfb05f4696eb910dc1f56268fef515eb784adca9489"
+    },
+    "barmag/screens/Main.drw": {
+      "bytes": 694605,
+      "sha256": "42cf3025142b2a01046dcdd22806621cad9cdeb3974d8be557cdb945f64044e5"
+    },
+    "barmag/screens/Status.INI": {
+      "bytes": 71,
+      "sha256": "3ea6f8750871b7378a648e687f68c57fadd29652bf6f62977d5017af8a2b8c06"
+    },
+    "barmag/logs/alarms/alarms.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "barmag/logs/reports/G_P1.db": {
+      "bytes": 158720,
+      "sha256": "2c1466bfb6effc0cc2f6d932c93152fd0778b64a2ac555bceead9caa5b19c4ea"
+    },
+    "barmag/logs/reports/G_P2.db": {
+      "bytes": 158720,
+      "sha256": "67922491a4891e964f03e419f3e5d66d1f7cc7374d67ed1070140457fc7cd33d"
+    },
+    "barmag/logs/reports/G_P3.db": {
+      "bytes": 158720,
+      "sha256": "6124aa13ceedf1e79ce40b6c5d863de572b99c8065abdc3d8181422356aba975"
+    },
+    "barmag/logs/reports/G_P4.db": {
+      "bytes": 158720,
+      "sha256": "9744e865d0c73857226b779f8f85876932e1bb0019639c3cf1df204a15def7c2"
+    },
+    "barmag/logs/reports/H_P1.db": {
+      "bytes": 157696,
+      "sha256": "e122bfd1c38c801d24ad6cc1db000d2fde2c2fe1e5bb8a5467652d32cb44d544"
+    },
+    "barmag/logs/reports/H_P2.db": {
+      "bytes": 157696,
+      "sha256": "1777686df6099b3d6f4b48d33c86729a4a287f83c721649cd186c318d2b4fdc5"
+    },
+    "barmag/logs/reports/H_P3.db": {
+      "bytes": 158720,
+      "sha256": "e64a241c2eb0143301b2ecb3c2fd3c35c09ed072b043051737dfc9b53a01307f"
+    },
+    "barmag/logs/reports/H_P4.db": {
+      "bytes": 158720,
+      "sha256": "a39243aaab0001862f9a75a4ef0fbf9bfa1ba4365102d7fca708832c351ee08a"
+    },
+    "barmag/logs/system/systemEvents.db": {
+      "bytes": 249856,
+      "sha256": "16136d1f736c7a436a66de7c0d4b385d21dcecc39aa55f1e88a015781202066d"
+    },
+    "barmag/logs/system/userops.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "barmag/logs/system/archives/systemEvents.db": {
+      "bytes": 24878080,
+      "sha256": "5a2566fe370ab00246b7f05e071bb34fbfd537f918e621920473da809fc6a477"
+    },
+    "barmag/logs/system/archives/userops.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "barmag/logs/reports/archives/G_P1.db": {
+      "bytes": 522240,
+      "sha256": "c8c15456317235cdb12d0d957229156e8c2e4043283380e405444b89ce200aa3"
+    },
+    "barmag/logs/reports/archives/G_P2.db": {
+      "bytes": 521216,
+      "sha256": "96d6cf86878227e31878675cb03e05a72edfd649428bd927f1b22ff15e81c988"
+    },
+    "barmag/logs/reports/archives/G_P3.db": {
+      "bytes": 520192,
+      "sha256": "5dce5d6e17cf254cc2861731b9a452f4bf88773da837c611549826abc284f3ba"
+    },
+    "barmag/logs/reports/archives/G_P4.db": {
+      "bytes": 520192,
+      "sha256": "17fbdef099c1b6f3784c40ed7caa27e8c15a5e771190cbda0d4b63438fa1c3b0"
+    },
+    "barmag/logs/reports/archives/H_P1.db": {
+      "bytes": 520192,
+      "sha256": "3cc31f039c3ca51298690bf89b253b1b1979d015770cdccfa0b8a6e1dc237852"
+    },
+    "barmag/logs/reports/archives/H_P2.db": {
+      "bytes": 521216,
+      "sha256": "c1a6e5c939e2cb1e49fb742ef22de214eaeac36f1152a1aceabf66c1d47de705"
+    },
+    "barmag/logs/reports/archives/H_P3.db": {
+      "bytes": 520192,
+      "sha256": "64cfcc3a0ddffe88023b4a366d9da092194c0e02a963148aefd70bb97a3873f0"
+    },
+    "barmag/logs/reports/archives/H_P4.db": {
+      "bytes": 521216,
+      "sha256": "47585340ad5ca11417d95c7acc1a5f28b7aa9ef439c76e5938c08936690d3c5d"
+    },
+    "barmag/logs/alarms/archives/alarms.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "Line MN": {
+    "links.sxml": {
+      "bytes": 31,
+      "sha256": "5162fc47b87524c985e77718c679e475058a57081833326a59f28622df62e52d"
+    },
+    "styles.sxml": {
+      "bytes": 24,
+      "sha256": "db13d3d496bfb42f3e46890809b5f211958e1f6dd310ae78a3efa0823dd72523"
+    },
+    "barmag/barmag.ini": {
+      "bytes": 94,
+      "sha256": "7154575238a045ea4d68f3b25c496b6ebb290eee219f40f78005619c7b6ab108"
+    },
+    "barmag/defs.db": {
+      "bytes": 27648,
+      "sha256": "782da93ddff9b20392a6438bcfae7affe58dd89ee348aee68f13d47011eebeb8"
+    },
+    "barmag/p.csv": {
+      "bytes": 456,
+      "sha256": "71b936cb781794bb21af087eec6637eb50054238b91b0db7b499cd2c4550c752"
+    },
+    "barmag/RTVar.sxml": {
+      "bytes": 25541,
+      "sha256": "ecc48a95f1e5eb50037f99a867014b525da5e677f2944180ec92f76e5ac7312f"
+    },
+    "barmag/settings.sxml": {
+      "bytes": 13605,
+      "sha256": "247f352b89f573ea1f5cddb488072cead9ac8f1aadbb38645ff87d3af9b8e1b6"
+    },
+    "barmag/vuapp.ini": {
+      "bytes": 5090,
+      "sha256": "afeb05e7329555a4f827c414d48a8203c6331968f68abc5f1ea8989cb1f26602"
+    },
+    "bin/01-01-2019-debug.txt": {
+      "bytes": 33,
+      "sha256": "cfc2b4cffce0bb5bdd580e869bf43dcf9c390ba36c97e5af3364bd20ca0eb19a"
+    },
+    "bin/01-07-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "23ea49028d1b37b374cfb99b11bfe53329f50c027d44b0f6306ea211c9972352"
+    },
+    "bin/01-12-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "22e3a469dadfedd89392f66502a90adadfff29236f72537d15a09dbb2ade9197"
+    },
+    "bin/02-10-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "9a2329699132bb11985b003dcd0cdcabb90c60fc0d6dbf290e6696e3531c2e3c"
+    },
+    "bin/03-01-2019-debug.txt": {
+      "bytes": 66,
+      "sha256": "8a6f1a1d2661c4101362a32b39d0a5cf8acd56cfbec63f8b7d674b678ea2a6b5"
+    },
+    "bin/03-02-2019-debug.txt": {
+      "bytes": 99,
+      "sha256": "d36cb9b57d3126aa8425728d8b51d991530c3fca3939c52cccc40d8687492106"
+    },
+    "bin/03-05-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "b96823e6f75926feeb5a2b17efdad4858f0e584d0c306a3d8e52eb74eab81dda"
+    },
+    "bin/03-11-2018-debug.txt": {
+      "bytes": 66,
+      "sha256": "f018bf7258152ddf4dd0256a85039d65edf8d5c3820a1fa44bbd31356f7ef37a"
+    },
+    "bin/05-07-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "844fbb0705df7259e2ca52b9199f635d94c824eb5ad2b3cd8798c12213f3c652"
+    },
+    "bin/05-09-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "4fea09abc6e49d92b5bf7c0f7fccb461c394795ff6d6612b64f7abaf33ffda64"
+    },
+    "bin/06-06-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "3b82c60b43d70d8bcc250cd94d7158c98309a1384ad7b46bdcd86f7013c44623"
+    },
+    "bin/07-12-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "e1faeb7cdefb518b2f59d7257754b30a7f9256ceafc48fa065e2fc54467872d6"
+    },
+    "bin/09-02-2019-debug.txt": {
+      "bytes": 33,
+      "sha256": "d9d4d088bbbab1a123ae9611e02a25d6a6530a881e9dc7831f804e4f5a641b18"
+    },
+    "bin/10-07-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "2bb17dda83feec774c2b05947bd58abb5d5953155fb1b1023c910a96412739cf"
+    },
+    "bin/11-06-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "d7ed983eac40be6e5953b67502b6f65167bc4a2f0a615c35306394294d74130b"
+    },
+    "bin/11-08-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "6dfb1e383162f5a024dbcf2fab8c570efad5c8c27cc32ad8b71bd1e156e717d2"
+    },
+    "bin/11-12-2018-debug.txt": {
+      "bytes": 66,
+      "sha256": "f2d416444dcf7268fc1a48f056a3d37fe3af2af4f5d4a4bd89358cce94db0a06"
+    },
+    "bin/12-12-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "c795faeacac031992858d4bd08587fcd39b144bb2c575a94f51775ff31b496aa"
+    },
+    "bin/13-01-2019-debug.txt": {
+      "bytes": 33,
+      "sha256": "ba44fe2569de62c81b63ad05910cf301e0be740d7796ed8b6b7bd93472804c2a"
+    },
+    "bin/16-05-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "bbe063a68eaa2bf8fefc2516795fc19d3cbd71bcd8cb88afea096527bbc03fc0"
+    },
+    "bin/16-10-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "c167bfd3376ad0b0c87295bc2f2f3372ba6b086d3558367cfd7efeb3310980b4"
+    },
+    "bin/17-06-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "ce7ddceb76ab8aee9dccd9a254459d0141e9784c2548a9bcce50b52f5a3af4fd"
+    },
+    "bin/17-11-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "132d1df9ced70d4e653efa5ea98e62678563194bd6580fb1a6462a14ff726d2a"
+    },
+    "bin/19-09-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "fd371b2c2f84c2f2ab8f8a3107cb5d67967d57c4704322f087fa3b120ecbf993"
+    },
+    "bin/19-10-2018-debug.txt": {
+      "bytes": 66,
+      "sha256": "d4d2f356e8996d986aa3a64bab6a0c2fffed90ada61604f118c0feb433fce6c6"
+    },
+    "bin/20-10-2018-debug.txt": {
+      "bytes": 66,
+      "sha256": "955325a22c22889eb41182470249fec2304514e0fce144d31a8e7de0c411be7f"
+    },
+    "bin/20-12-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "3af217d3694579b832066d9a3cc93fe62ada6ad7cc8a5022ef867b98a02fe9f4"
+    },
+    "bin/21-05-2018-debug.txt": {
+      "bytes": 198,
+      "sha256": "6c88b38843e9a596cb3855649dad88776e1de989c7e9aa3ba3feac815a3e1048"
+    },
+    "bin/21-10-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "48ce0f91339efca8fabbbab0f365925891fc4e9e0d7fd4dc8ef9b3374ba2b59f"
+    },
+    "bin/22-08-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "e77baf88f412015d9c6d755d4d74c14cccaff983066d88fcdf41a1d9dcbf08b7"
+    },
+    "bin/23-01-2019-debug.txt": {
+      "bytes": 99,
+      "sha256": "a509738b796905aaddd89b136b830d68ef00bf3fed5630ca5526cf30dcefe2ea"
+    },
+    "bin/23-06-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "e674394c5d10e968e395fda3bf027e501140f7f6444774c03edb46afb05e2d64"
+    },
+    "bin/24-10-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "eb7a13f736876054415377689577bd0db9c70f6332f90c7aec00f99221548e8f"
+    },
+    "bin/25-06-2018-debug.txt": {
+      "bytes": 66,
+      "sha256": "f728d83ec9a58693f7761fb461c7f6ddfc94c183ee238c5207c7a566fbbce10d"
+    },
+    "bin/27-01-2019-debug.txt": {
+      "bytes": 33,
+      "sha256": "0ab2bd6fb4b5039f236b85ad9e96b216f0402582b8b24b7fbbc33e554aaafa9d"
+    },
+    "bin/27-05-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "6f69bb1daad3ba2da09ee61308f3990d677d1b7689dc9f650d466a5dff74403e"
+    },
+    "bin/29-05-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "3ae74aa70a2de6b3df2a47a078b1193fb188ea754d9e40ccd5384af9555bb00d"
+    },
+    "bin/29-10-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "5f083e582c7c2d7bb342742ac2eeee06bde4c3115a027fb46058b6ee34c3dcb6"
+    },
+    "bin/31-12-2018-debug.txt": {
+      "bytes": 33,
+      "sha256": "b09b89d127dbccf2011696a3408c150ea266f63f2fd85365b97c638c9cf0be6d"
+    },
+    "bin/DRVbarmag.dll": {
+      "bytes": 387584,
+      "sha256": "21729da20e3b4f6d67a9925b6edfb249f6c05b5a98949b88b364bc98e7a7a8ac"
+    },
+    "bin/DrvDT.dll": {
+      "bytes": 382976,
+      "sha256": "933855286d9b617373eb34b9f15099fed672dbd9bc62c70064286fe99808bf3f"
+    },
+    "bin/DrvgwWS.dll": {
+      "bytes": 420864,
+      "sha256": "fea7caf7fd70d81b6efb55a097244315a138ad118404ce9cb7b9e917fd51923d"
+    },
+    "bin/gdiplus.dll": {
+      "bytes": 1712128,
+      "sha256": "ddbcc667f1adeeaa2c3f3f9e9a0c163d624cf8168462710f939854ec13901ce4"
+    },
+    "bin/HEI32_3.DLL": {
+      "bytes": 77824,
+      "sha256": "854186a189c859dec8eb8acedb92986857cfdb9a8342f4c14d20e4b09ed8c637"
+    },
+    "bin/license.exe": {
+      "bytes": 412672,
+      "sha256": "c2b8047b27703d9b88e0702be59bf362b4861e36970c1c3154ddeb6bcb671e3d"
+    },
+    "bin/sqlite3.dll": {
+      "bytes": 246784,
+      "sha256": "05dbbb66df11db7e2dda6bcf2b16159b220bb58ff370c985f05f26d7049d2d5d"
+    },
+    "bin/Vuniq.exe": {
+      "bytes": 3971072,
+      "sha256": "5d685bf145baa1cefd7ec6f7a62c45ffb819df364c0fe7072986d5ed2595eafa"
+    },
+    "VB/General.bas": {
+      "bytes": 17003,
+      "sha256": "c7cbb9427516a15ff693d1d445f86e4720ec20b4c8053872bc4814ab2cb67a27"
+    },
+    "VB/Main.frm": {
+      "bytes": 1244,
+      "sha256": "1590aa529b9a139f297a78c552ef072616755f417ea327b1b663f958bdee363a"
+    },
+    "VB/Nilit.exe": {
+      "bytes": 49152,
+      "sha256": "af8a81f8174c0a6b10f933e062c9bb7e0e4d5ab97948375ef7fc6f91d05792dd"
+    },
+    "VB/nilit.PDM": {
+      "bytes": 4296,
+      "sha256": "b2c74b14d3691cde3f800c6bedabf466708a43d6d38fa2da7ea4c2114e88eabe"
+    },
+    "VB/nilit.vbp": {
+      "bytes": 728,
+      "sha256": "dc2e3a6fb1c4525e26ec7406b78e18624f86828d2309832e4bc54f13a6d9f57e"
+    },
+    "VB/nilit.vbw": {
+      "bytes": 78,
+      "sha256": "6ff8a1654d2474936a2a9b857db382c46895fc58bd780759732de47bdc622642"
+    },
+    "VB_old/General.bas": {
+      "bytes": 16951,
+      "sha256": "c8f82607f51aeb25186605d77bf3156879a3f4b15a57b2a6cb50ef24eed8c494"
+    },
+    "VB_old/Main.frm": {
+      "bytes": 1149,
+      "sha256": "0fb367ce66ac27d12ae42b3d6decb65d015c0e0fca6a04ab5d676e56fb001063"
+    },
+    "VB_old/MSSCCPRJ.SCC": {
+      "bytes": 334,
+      "sha256": "6af03d44c9a4646f95db8faf7ae3d6ad957f3efb390ed3dc28590fb07c468b6d"
+    },
+    "VB_old/Nilit.exe": {
+      "bytes": 49152,
+      "sha256": "443cd47f179808ef4bb71557f3d493d656bd56e1ef0e2abbdecb4211852c6793"
+    },
+    "VB_old/nilit.PDM": {
+      "bytes": 4296,
+      "sha256": "b2c74b14d3691cde3f800c6bedabf466708a43d6d38fa2da7ea4c2114e88eabe"
+    },
+    "VB_old/nilit.vbp": {
+      "bytes": 722,
+      "sha256": "4f9605b6a65516a6708b3f382d7c90637034a7468a576643357e8bceb579e6b3"
+    },
+    "VB_old/nilit.vbw": {
+      "bytes": 78,
+      "sha256": "6ff8a1654d2474936a2a9b857db382c46895fc58bd780759732de47bdc622642"
+    },
+    "barmag/screens/Line.drw": {
+      "bytes": 145483,
+      "sha256": "b49eaa5320127255863e24c4f2df78f1ce8a0bdd95c87883e7e34d547c428690"
+    },
+    "barmag/screens/Main.drw": {
+      "bytes": 694621,
+      "sha256": "92f07e612a05f49ac2b2f3919f457a60d53004ff5a16d210db61e5545e33f9ab"
+    },
+    "barmag/screens/Status.INI": {
+      "bytes": 71,
+      "sha256": "3ea6f8750871b7378a648e687f68c57fadd29652bf6f62977d5017af8a2b8c06"
+    },
+    "barmag/screens/Toolbar.drw": {
+      "bytes": 5399,
+      "sha256": "1d32c59e3157e6700d622cf15cb47787d379b32a02f0b91d9093c8626283900f"
+    },
+    "barmag/logs/alarms/alarms.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "barmag/logs/reports/M_P1.db": {
+      "bytes": 158720,
+      "sha256": "494ce17e7fb2a8472e8e16b57360ecc2eb8c765b07fd5b4fac1e26c49d8916ba"
+    },
+    "barmag/logs/reports/M_P2.db": {
+      "bytes": 159744,
+      "sha256": "ffdaa5a794a782e067bfc13b2bee4054779cc15def2ecff3dba96423820f0b07"
+    },
+    "barmag/logs/reports/M_P3.db": {
+      "bytes": 155648,
+      "sha256": "224ded3568cd09509a603308462dbcce9cfd30d4ad638207a8010c536d8584d8"
+    },
+    "barmag/logs/reports/M_P4.db": {
+      "bytes": 155648,
+      "sha256": "ee4ba240156a7f6f7de6c003434656a65b2f1de15c509a9211c6f1c67a7acaf0"
+    },
+    "barmag/logs/reports/N_P1.db": {
+      "bytes": 115712,
+      "sha256": "5b7a37ef3430d6412aee8bc0302bc6f3259232810eb4dadbcedcd87291305e2d"
+    },
+    "barmag/logs/reports/N_P2.db": {
+      "bytes": 157696,
+      "sha256": "13adf44243228ded54130aa56c0570d4311c170e2a88a5350bf095c8c1225619"
+    },
+    "barmag/logs/reports/N_P3.db": {
+      "bytes": 136192,
+      "sha256": "2dad07a4eacba2bd07b083aa0858cab333f1b3750643183e4d1765105f43b4bb"
+    },
+    "barmag/logs/reports/N_P4.db": {
+      "bytes": 135168,
+      "sha256": "9c1d4b851435a621c16b7d3ce9101440b64f463a7d1d43b12858a31ab3d00808"
+    },
+    "barmag/logs/system/systemEvents.db": {
+      "bytes": 303104,
+      "sha256": "dc25677dc52734a28b1b3196715831bd5d8f24c356f33ea9398b44edeaeb3df0"
+    },
+    "barmag/logs/system/userops.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "barmag/logs/system/archives/systemEvents.db": {
+      "bytes": 17777664,
+      "sha256": "aaf5223d7b75edf2deea045d5856a508d00f2a3428caa83b1cb65bfd3bb9105d"
+    },
+    "barmag/logs/system/archives/userops.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "barmag/logs/reports/archives/M_P1.db": {
+      "bytes": 518144,
+      "sha256": "e9abb2b4b67005ed75a3f47b2a728bba2eac177a985fed4d307cb282beee7fac"
+    },
+    "barmag/logs/reports/archives/M_P2.db": {
+      "bytes": 519168,
+      "sha256": "2179595346ad40fe5c45c7a404053e4d03faa4bfa818b14704fa3c764b0c19dd"
+    },
+    "barmag/logs/reports/archives/M_P3.db": {
+      "bytes": 515072,
+      "sha256": "5adf0fd34e71dc3ebe4e23d6236cde7b1610843c587b5ef2cc24b554701ec64f"
+    },
+    "barmag/logs/reports/archives/M_P4.db": {
+      "bytes": 518144,
+      "sha256": "42ab69f4c2aff8d505766618a0cef1b686ea901c09fb8d1d086479217a0be801"
+    },
+    "barmag/logs/reports/archives/N_P1.db": {
+      "bytes": 380928,
+      "sha256": "aa51e0e12771a9365686dbe3322116f2110d66a385542b9be9df314307809590"
+    },
+    "barmag/logs/reports/archives/N_P2.db": {
+      "bytes": 518144,
+      "sha256": "ee257be6d912834e3d06e0a6b051f95e57076027c2a7efadb61cfe4db372baec"
+    },
+    "barmag/logs/reports/archives/N_P3.db": {
+      "bytes": 448512,
+      "sha256": "589192f97db188185e25eebd345acaf70a0f7642ae525aefd73b8082276d0041"
+    },
+    "barmag/logs/reports/archives/N_P4.db": {
+      "bytes": 449536,
+      "sha256": "cf4f539e4899da4e2c1f3c0acc380e8cf3eb0d7e01e03b88553d11a9ac108189"
+    },
+    "barmag/logs/alarms/archives/alarms.db": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
